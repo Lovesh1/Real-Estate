@@ -1,11 +1,11 @@
-import dotenv from 'dotenv'
-dotenv.config()
+import dotenv  from "dotenv"
 import express from 'express'
 import mongoose from 'mongoose';
 import userRouter from './routes/user.router.js'
 import authRouter from './routes/auth.router.js'
+dotenv.config()
 
-mongoose.connect().then(() =>{
+mongoose.connect(process.env.CONNECTION_STRING).then(() =>{
     console.log("Connected to database")
 }).catch((err) => {console.log(err)}) 
 
