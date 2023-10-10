@@ -33,7 +33,7 @@ export default function Sign_out() {
       }
       setloading(false);
       navigate('/sign-in');
-      console.log(data);
+      
     };
 
   return (
